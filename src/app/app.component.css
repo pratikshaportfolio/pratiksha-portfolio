@@ -500,16 +500,15 @@
     align-items: center;
     justify-content: space-around;
     gap: 15px;
-    margin: 22px 0;
+    margin-top:20px;
   }
   
   .score-circle {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     justify-content: center;
-    padding-top: 22px;
-    width: 88px;
-    height: 88px;
+    width: 100px;
+    height: 100px;
     flex-shrink: 0;
     border: 5px solid var(--accent);
     border-right-color: #35444f;
