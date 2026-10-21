@@ -1,3 +1,4 @@
+
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
@@ -10,4 +11,25 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'my-portfolio';
+
+  isMobileMenuOpen = false;
+
+  toggleMobileMenu(): void {
+    this.isMobileMenuOpen = !this.isMobileMenuOpen;
+  }
+
+  navigateTo(sectionId: string, event: MouseEvent): void {
+    event.preventDefault();
+
+    const section = document.getElementById(sectionId);
+
+    if (section) {
+      section.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+
+    this.isMobileMenuOpen = false;
+  }
 }
